@@ -2,7 +2,7 @@
 
 namespace W6_assignment_template.Models
 {
-    public class Ghost : CharacterBase, IFlyable
+    public class Ghost : CharacterBase, IFlyable, ILootable
     {
         public string Treasure { get; set; }
 
