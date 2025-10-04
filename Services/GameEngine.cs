@@ -7,13 +7,15 @@ namespace W6_assignment_template.Services
     {
         private readonly IContext _context;
         private readonly Player _player;
-        private readonly Goblin _goblin;
+        private readonly Monster _goblin;
+        private readonly Monster _ghost;
 
         public GameEngine(IContext context)
         {
             _context = context;
             _player = context.Characters.OfType<Player>().FirstOrDefault();
             _goblin = _context.Characters.OfType<Goblin>().FirstOrDefault();
+            _ghost = _context.Characters.OfType<Ghost>().FirstOrDefault();
         }
 
         public void Run()
@@ -28,9 +30,15 @@ namespace W6_assignment_template.Services
 
             _goblin.Move();
             _goblin.Attack(_player);
+            _goblin.UniqueBehavior();
+
+            _ghost.Move();
+            _ghost.Attack(_player);
+            _ghost.UniqueBehavior();
 
             _player.Move();
             _player.Attack(_goblin);
+            _player.UniqueBehavior();
 
             Console.WriteLine($"Player Gold: {_player.Gold}");
 

@@ -34,7 +34,7 @@
   },
   {
     "$type": "W6_assignment_template.Models.Ghost",
-    "Name": "Silent Ghost",
+    "Name": "A Fricken Loud Ghost",
     "Type": "Ghost",
     "Level": 2,
     "HP": 8,

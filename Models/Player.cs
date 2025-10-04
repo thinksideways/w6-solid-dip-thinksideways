@@ -12,7 +12,7 @@
 
         public override void UniqueBehavior()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} adds more product to his hair.  He spritses himself with Burberry Hero and Sauvage by Christian Dior.  {Name} always gets the girl because he's a {Type}");
         }
     }
 }
